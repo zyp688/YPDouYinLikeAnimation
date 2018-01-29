@@ -10,6 +10,8 @@
 实现动画：[ani createAnimationWithTap:tap];
 tap：触发动画对应的手势
 ```
+### 效果说明
+![image](https://github.com/zyp688/YPDouYinLikeAnimation/blob/master/YPDouYinLikeAnimation.gif) 
 
 ##### 【借鉴声明：本篇无借鉴，如有雷同，纯属盗版】
 
