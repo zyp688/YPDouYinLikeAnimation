@@ -15,9 +15,9 @@
 		2B1BADD9201EF85F00A6515A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1BADD8201EF85F00A6515A /* main.m */; };
 		2B1BADE3201EF86000A6515A /* YPDouYinLikeAnimationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1BADE2201EF86000A6515A /* YPDouYinLikeAnimationDemoTests.m */; };
 		2B1BADEE201EF86000A6515A /* YPDouYinLikeAnimationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1BADED201EF86000A6515A /* YPDouYinLikeAnimationDemoUITests.m */; };
-		2B1BAE01201EF86B00A6515A /* video_icon_like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B1BADFE201EF86B00A6515A /* video_icon_like@3x.png */; };
-		2B1BAE02201EF86B00A6515A /* video_icon_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B1BADFF201EF86B00A6515A /* video_icon_like@2x.png */; };
 		2B1BAE03201EF86B00A6515A /* YPDouYinLikeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1BAE00201EF86B00A6515A /* YPDouYinLikeAnimation.m */; };
+		2B96442C205BD4D40019FB8E /* video_icon_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B96442A205BD4D40019FB8E /* video_icon_like@2x.png */; };
+		2B96442D205BD4D40019FB8E /* video_icon_like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B96442B205BD4D40019FB8E /* video_icon_like@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +55,9 @@
 		2B1BADED201EF86000A6515A /* YPDouYinLikeAnimationDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPDouYinLikeAnimationDemoUITests.m; sourceTree = "<group>"; };
 		2B1BADEF201EF86000A6515A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B1BADFC201EF86B00A6515A /* YPDouYinLikeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPDouYinLikeAnimation.h; sourceTree = "<group>"; };
-		2B1BADFE201EF86B00A6515A /* video_icon_like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_icon_like@3x.png"; sourceTree = "<group>"; };
-		2B1BADFF201EF86B00A6515A /* video_icon_like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_icon_like@2x.png"; sourceTree = "<group>"; };
 		2B1BAE00201EF86B00A6515A /* YPDouYinLikeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPDouYinLikeAnimation.m; sourceTree = "<group>"; };
+		2B96442A205BD4D40019FB8E /* video_icon_like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_icon_like@2x.png"; sourceTree = "<group>"; };
+		2B96442B205BD4D40019FB8E /* video_icon_like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_icon_like@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +153,8 @@
 		2B1BADFD201EF86B00A6515A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2B1BADFE201EF86B00A6515A /* video_icon_like@3x.png */,
-				2B1BADFF201EF86B00A6515A /* video_icon_like@2x.png */,
+				2B96442A205BD4D40019FB8E /* video_icon_like@2x.png */,
+				2B96442B205BD4D40019FB8E /* video_icon_like@3x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -267,9 +267,9 @@
 			files = (
 				2B1BADD6201EF85F00A6515A /* LaunchScreen.storyboard in Resources */,
 				2B1BADD3201EF85F00A6515A /* Assets.xcassets in Resources */,
+				2B96442C205BD4D40019FB8E /* video_icon_like@2x.png in Resources */,
 				2B1BADD1201EF85F00A6515A /* Main.storyboard in Resources */,
-				2B1BAE01201EF86B00A6515A /* video_icon_like@3x.png in Resources */,
-				2B1BAE02201EF86B00A6515A /* video_icon_like@2x.png in Resources */,
+				2B96442D205BD4D40019FB8E /* video_icon_like@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2NV7E9GWG9;
 				INFOPLIST_FILE = YPDouYinLikeAnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -475,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2NV7E9GWG9;
 				INFOPLIST_FILE = YPDouYinLikeAnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
