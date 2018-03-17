@@ -1,4 +1,4 @@
-//
+ //
 //  YPDouYinDianZanAnimationTool.m
 //  TestDemo
 //
@@ -15,25 +15,18 @@
 
 //---------------------------------------------私有定制·配置区
 /** ❤️形图片的名字*/
-NSString *const yp_heartImgName = @"video_icon_like";
+NSString *const yp_heartImgName = @"yp_video_like";
 /** ❤️形图片的宽度*/
 const CGFloat yp_heartImgWidth = 80;
 /** ❤️形图片的高度*/
-const CGFloat yp_heartImgHeght = 80;
+const CGFloat yp_heartImgHeight = 80;
 //---------------------------------------------私有定制·配置区
 
 
 @interface YPDouYinLikeAnimation ()
 
-/**  图片队列*/
-@property (nonatomic, strong)NSMutableArray *imgsArr;
-/**  记录上一个响应点*/
-@property (nonatomic, assign)CGPoint lastPoint;
-/**  当前有正在执行中的动画标志，控制队列*/
-@property (nonatomic, assign)BOOL isAnimationING;
 
 @end
-
 
 @implementation YPDouYinLikeAnimation
 
@@ -56,19 +49,29 @@ const CGFloat yp_heartImgHeght = 80;
     NSSet *allTouches = [event allTouches];
     UITouch *touch = [allTouches anyObject];
     CGPoint point = [touch locationInView:[touch view]];
-    UIImage *img = [UIImage imageNamed:@"video_icon_like"];
-    UIImageView *imgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, yp_heartImgWidth, yp_heartImgHeght)];
+    UIImage *img = [UIImage imageNamed:yp_heartImgName];
+    UIImageView *imgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, yp_heartImgWidth, yp_heartImgHeight)];
     imgV.image = img;
     imgV.contentMode = UIViewContentModeScaleAspectFill;
     imgV.center = point;
-    [[touch view] addSubview:imgV];
     
+    /**  左右随机显示*/
     int leftOrRight = arc4random()%2;
     leftOrRight = leftOrRight ? leftOrRight : -1;
-    imgV.transform = CGAffineTransformMakeRotation(M_PI / 10.0 * leftOrRight);
-    [self.imgsArr addObject:imgV];
-    [self performSelector:@selector(startAnimations) withObject:nil afterDelay:0.15];
+    imgV.transform = CGAffineTransformRotate(imgV.transform,M_PI / 9 * leftOrRight);
+    [[touch view] addSubview:imgV];
+    
+    /** 出现的时候回弹一下*/
+    __block UIImageView *blockImgV = imgV;
+    [UIView animateWithDuration:0.1 animations:^{
+        blockImgV.transform = CGAffineTransformScale(blockImgV.transform, 1.2, 1.2);
+    } completion:^(BOOL finished) {
+        blockImgV.transform = CGAffineTransformScale(blockImgV.transform, 0.8, 0.8);
+        /** 向上飘，放大，透明*/
+        [self performSelector:@selector(animationToTop:) withObject:blockImgV afterDelay:0.3];
+    }];
 }
+
 
 /**  点击来触发的动画*/
 #pragma mark -
@@ -76,50 +79,39 @@ const CGFloat yp_heartImgHeght = 80;
 - (void)createAnimationWithTap:(UITapGestureRecognizer *)tap {
     CGPoint point = [tap locationInView:[tap view]];
     UIImage *img = [UIImage imageNamed:yp_heartImgName];
-    UIImageView *imgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, yp_heartImgWidth, yp_heartImgHeght)];
+    UIImageView *imgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, yp_heartImgWidth, yp_heartImgHeight)];
     imgV.image = img;
     imgV.contentMode = UIViewContentModeScaleAspectFill;
     imgV.center = point;
     [[tap view] addSubview:imgV];
+    
+    /**  左右随机显示*/
     int leftOrRight = arc4random()%2;
     leftOrRight = leftOrRight ? leftOrRight : -1;
-    imgV.transform = CGAffineTransformMakeRotation(M_PI / 10.0 * leftOrRight);
-    [self.imgsArr addObject:imgV];
-    [self performSelector:@selector(startAnimations) withObject:nil afterDelay:0.15];
-}
-
-#pragma mark -
-#pragma mark - 🎱 startAnimations 开始触发动画
-- (void)startAnimations {
-    if (self.isAnimationING) {
-        return;
-    }
-    if (self.imgsArr.count) {
-        __block UIImageView *firstImgV = [self.imgsArr firstObject];
-        self.isAnimationING = YES;
-        [UIView animateWithDuration:0.25 animations:^{
-            firstImgV.transform = CGAffineTransformMakeScale(3.0, 3.0);
-            firstImgV.alpha = 0.1;
-        } completion:^(BOOL finished) {
-            self.isAnimationING = NO;
-            firstImgV.hidden = YES;
-            [self.imgsArr removeObject:firstImgV];
-            firstImgV = nil;
-            if (self.imgsArr.count) {
-                [self performSelector:@selector(startAnimations) withObject:nil afterDelay:0.35];
-            }
-        }];
-    }
-}
-
-#pragma mark -
-#pragma mark - 🎱 减方法
-- (NSMutableArray *)imgsArr {
-    if (!_imgsArr) {
-        _imgsArr = [NSMutableArray array];
-    }
+    imgV.transform = CGAffineTransformRotate(imgV.transform,M_PI / 9 * leftOrRight);
     
-    return _imgsArr;
+    /** 出现的时候回弹一下*/
+    __block UIImageView *blockImgV = imgV;
+    [UIView animateWithDuration:0.1 animations:^{
+        blockImgV.transform = CGAffineTransformScale(blockImgV.transform, 1.2, 1.2);
+    } completion:^(BOOL finished) {
+        blockImgV.transform = CGAffineTransformScale(blockImgV.transform, 0.8, 0.8);
+        /** 向上飘，放大，透明*/
+        [self performSelector:@selector(animationToTop:) withObject:blockImgV afterDelay:0.3];
+    }];
+    
+}
+
+#pragma mark -
+#pragma mark - 🎱 animationToTop
+- (void)animationToTop:(UIImageView *)blockImgV {
+    [UIView animateWithDuration:1.0 animations:^{
+        blockImgV.frame = CGRectMake(blockImgV.frame.origin.x, blockImgV.frame.origin.y - 100, blockImgV.frame.size.width, blockImgV.frame.size.height);
+        blockImgV.transform = CGAffineTransformScale(blockImgV.transform, 1.8, 1.8);
+        blockImgV.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 @end
