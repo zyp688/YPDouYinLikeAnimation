@@ -63,12 +63,13 @@ const CGFloat yp_heartImgHeight = 80;
     
     /** 出现的时候回弹一下*/
     __block UIImageView *blockImgV = imgV;
+    __block UIImage *blockImg = img;
     [UIView animateWithDuration:0.1 animations:^{
         blockImgV.transform = CGAffineTransformScale(blockImgV.transform, 1.2, 1.2);
     } completion:^(BOOL finished) {
         blockImgV.transform = CGAffineTransformScale(blockImgV.transform, 0.8, 0.8);
         /** 向上飘，放大，透明*/
-        [self performSelector:@selector(animationToTop:) withObject:blockImgV afterDelay:0.3];
+        [self performSelector:@selector(animationToTop:) withObject:@[blockImgV,blockImg] afterDelay:0.3];
     }];
 }
 
@@ -92,26 +93,32 @@ const CGFloat yp_heartImgHeight = 80;
     
     /** 出现的时候回弹一下*/
     __block UIImageView *blockImgV = imgV;
+    __block UIImageView *blockImg = img;
     [UIView animateWithDuration:0.1 animations:^{
         blockImgV.transform = CGAffineTransformScale(blockImgV.transform, 1.2, 1.2);
     } completion:^(BOOL finished) {
         blockImgV.transform = CGAffineTransformScale(blockImgV.transform, 0.8, 0.8);
         /** 向上飘，放大，透明*/
-        [self performSelector:@selector(animationToTop:) withObject:blockImgV afterDelay:0.3];
+        [self performSelector:@selector(animationToTop:) withObject:@[blockImgV,blockImg] afterDelay:0.3];
     }];
     
 }
 
 #pragma mark -
 #pragma mark - 🎱 animationToTop
-- (void)animationToTop:(UIImageView *)blockImgV {
-    [UIView animateWithDuration:1.0 animations:^{
-        blockImgV.frame = CGRectMake(blockImgV.frame.origin.x, blockImgV.frame.origin.y - 100, blockImgV.frame.size.width, blockImgV.frame.size.height);
-        blockImgV.transform = CGAffineTransformScale(blockImgV.transform, 1.8, 1.8);
-        blockImgV.alpha = 0.0;
-    } completion:^(BOOL finished) {
-        
-    }];
+- (void)animationToTop:(NSArray *)imgObjects {
+    if (imgObjects && imgObjects.count > 0) {
+        __block UIImageView *imageV = (UIImageView *)imgObjects[0];
+        __block UIImage *img = (UIImage *)imgObjects[1];
+        [UIView animateWithDuration:1.0 animations:^{
+            imageV.frame = CGRectMake(imageV.frame.origin.x, imageV.frame.origin.y - 100, imageV.frame.size.width, imageV.frame.size.height);
+            imageV.transform = CGAffineTransformScale(imageV.transform, 1.8, 1.8);
+            imageV.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            imageV = nil;
+            img = nil;
+        }];
+    }
 }
 
 @end

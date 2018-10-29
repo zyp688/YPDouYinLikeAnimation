@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2685566C2186A68600114905 /* YPDouYinLikeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685566B2186A68600114905 /* YPDouYinLikeAnimation.m */; };
 		2B1BADCB201EF85F00A6515A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1BADCA201EF85F00A6515A /* AppDelegate.m */; };
 		2B1BADCE201EF85F00A6515A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1BADCD201EF85F00A6515A /* ViewController.m */; };
 		2B1BADD1201EF85F00A6515A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1BADCF201EF85F00A6515A /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		2B1BADD9201EF85F00A6515A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1BADD8201EF85F00A6515A /* main.m */; };
 		2B1BADE3201EF86000A6515A /* YPDouYinLikeAnimationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1BADE2201EF86000A6515A /* YPDouYinLikeAnimationDemoTests.m */; };
 		2B1BADEE201EF86000A6515A /* YPDouYinLikeAnimationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1BADED201EF86000A6515A /* YPDouYinLikeAnimationDemoUITests.m */; };
-		2B6BB0C0205CE81A002F2BBF /* YPDouYinLikeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BB0BD205CE81A002F2BBF /* YPDouYinLikeAnimation.m */; };
 		2BA7EE89205F529900BBAC88 /* yp_video_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA7EE87205F529900BBAC88 /* yp_video_like@2x.png */; };
 		2BA7EE8A205F529900BBAC88 /* yp_video_like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA7EE88205F529900BBAC88 /* yp_video_like@3x.png */; };
 /* End PBXBuildFile section */
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2685566A2186A68600114905 /* YPDouYinLikeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPDouYinLikeAnimation.h; path = ../../../YPDouYinLikeAnimation/YPDouYinLikeAnimation.h; sourceTree = "<group>"; };
+		2685566B2186A68600114905 /* YPDouYinLikeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YPDouYinLikeAnimation.m; path = ../../../YPDouYinLikeAnimation/YPDouYinLikeAnimation.m; sourceTree = "<group>"; };
 		2B1BADC6201EF85F00A6515A /* YPDouYinLikeAnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YPDouYinLikeAnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1BADC9201EF85F00A6515A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2B1BADCA201EF85F00A6515A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,8 +56,6 @@
 		2B1BADE9201EF86000A6515A /* YPDouYinLikeAnimationDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YPDouYinLikeAnimationDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1BADED201EF86000A6515A /* YPDouYinLikeAnimationDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPDouYinLikeAnimationDemoUITests.m; sourceTree = "<group>"; };
 		2B1BADEF201EF86000A6515A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B6BB0B9205CE81A002F2BBF /* YPDouYinLikeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPDouYinLikeAnimation.h; sourceTree = "<group>"; };
-		2B6BB0BD205CE81A002F2BBF /* YPDouYinLikeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPDouYinLikeAnimation.m; sourceTree = "<group>"; };
 		2BA7EE87205F529900BBAC88 /* yp_video_like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yp_video_like@2x.png"; sourceTree = "<group>"; };
 		2BA7EE88205F529900BBAC88 /* yp_video_like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yp_video_like@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,9 +143,9 @@
 		2B6BB0B8205CE81A002F2BBF /* YPDouYinLikeAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				2685566A2186A68600114905 /* YPDouYinLikeAnimation.h */,
+				2685566B2186A68600114905 /* YPDouYinLikeAnimation.m */,
 				2B6BB0BA205CE81A002F2BBF /* Resources */,
-				2B6BB0B9205CE81A002F2BBF /* YPDouYinLikeAnimation.h */,
-				2B6BB0BD205CE81A002F2BBF /* YPDouYinLikeAnimation.m */,
 			);
 			path = YPDouYinLikeAnimation;
 			sourceTree = "<group>";
@@ -294,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B6BB0C0205CE81A002F2BBF /* YPDouYinLikeAnimation.m in Sources */,
+				2685566C2186A68600114905 /* YPDouYinLikeAnimation.m in Sources */,
 				2B1BADCE201EF85F00A6515A /* ViewController.m in Sources */,
 				2B1BADD9201EF85F00A6515A /* main.m in Sources */,
 				2B1BADCB201EF85F00A6515A /* AppDelegate.m in Sources */,
@@ -461,11 +461,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2NV7E9GWG9;
+				DEVELOPMENT_TEAM = S56T3B6DT2;
 				INFOPLIST_FILE = YPDouYinLikeAnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Zyp.YPDouYinLikeAnimationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyp.YPDouYinLikeAnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -476,11 +476,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2NV7E9GWG9;
+				DEVELOPMENT_TEAM = S56T3B6DT2;
 				INFOPLIST_FILE = YPDouYinLikeAnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Zyp.YPDouYinLikeAnimationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyp.YPDouYinLikeAnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -491,6 +491,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S56T3B6DT2;
 				INFOPLIST_FILE = YPDouYinLikeAnimationDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zyp.YPDouYinLikeAnimationDemoTests;
@@ -505,6 +506,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S56T3B6DT2;
 				INFOPLIST_FILE = YPDouYinLikeAnimationDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zyp.YPDouYinLikeAnimationDemoTests;
@@ -518,6 +520,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S56T3B6DT2;
 				INFOPLIST_FILE = YPDouYinLikeAnimationDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zyp.YPDouYinLikeAnimationDemoUITests;
@@ -531,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S56T3B6DT2;
 				INFOPLIST_FILE = YPDouYinLikeAnimationDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zyp.YPDouYinLikeAnimationDemoUITests;
