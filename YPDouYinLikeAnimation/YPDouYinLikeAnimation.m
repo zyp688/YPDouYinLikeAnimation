@@ -93,7 +93,7 @@ const CGFloat yp_heartImgHeight = 80;
     
     /** 出现的时候回弹一下*/
     __block UIImageView *blockImgV = imgV;
-    __block UIImageView *blockImg = img;
+    __block UIImage *blockImg = img;
     [UIView animateWithDuration:0.1 animations:^{
         blockImgV.transform = CGAffineTransformScale(blockImgV.transform, 1.2, 1.2);
     } completion:^(BOOL finished) {
