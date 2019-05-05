@@ -1,4 +1,6 @@
-# YPDouYinLikeAnimation
+# YPDouYinLikeAnimation（QQ打趣群：68153279）
+## ☆☆☆ “iOS仿抖音点赞动画” ☆☆☆
+
 ### 应用场景
 ```
 近期项目中有需要类似抖音小视频的双击点赞的动画，简单仿照了一下，有需要的同学可以直接导入工程中使用
